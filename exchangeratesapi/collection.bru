@@ -1,0 +1,13 @@
+auth {
+  mode: apikey
+}
+
+auth:apikey {
+  key: access_key
+  value: {{process.env.API_KEY}}
+  placement: queryparams
+}
+vars:pre-request {
+  symbols_list: AUD,CZK,EUR,GBP,JPY,KRW,MYR,SGD,TWD,USD
+  api_base_url: https://api.exchangeratesapi.io/v1
+}

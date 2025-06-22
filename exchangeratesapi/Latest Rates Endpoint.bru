@@ -1,0 +1,15 @@
+meta {
+  name: Latest Rates Endpoint
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api_base_url}}/latest?symbols={{symbols_list}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  symbols: {{symbols_list}}
+}

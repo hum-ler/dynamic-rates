@@ -1,0 +1,19 @@
+meta {
+  name: Historical Rates Endpoint
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{api_base_url}}/{{date}}?symbols={{symbols_list}}
+  body: none
+  auth: inherit
+}
+
+params:query {
+  symbols: {{symbols_list}}
+}
+
+vars:pre-request {
+  date: 2025-06-01
+}
